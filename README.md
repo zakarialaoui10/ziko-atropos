@@ -1,7 +1,7 @@
 > [!NOTE]  
 > This project is part of the [ZikoJS](https://github.com/zakarialaoui10/ziko.js) ecosystem.
 
-# [Addon Title]
+# ziko-atropos
 
 <!-- 
 Overview Or Description
@@ -10,7 +10,30 @@ Doc
 
 ## Install
 
+```bash
+npm i ziko-atropos 
+```
+
 ## Usage
+
+```js
+import { Atropos } from 'ziko-atropos'
+import { tags } from 'ziko/ui'
+
+const a = Atropos(
+    tags.div().style({
+        width : '100%',
+        height : '100%',
+        background : 'blue'
+    })
+).style({
+    border : '2px darkblue dotted',
+    width : '400px',
+    height : '300px',
+    margin : '20px auto'
+})
+a.mount(document.body)
+```
 
 ## Features
 
