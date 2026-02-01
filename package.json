@@ -1,9 +1,14 @@
 {
-  "name": "ziko-addon_name",
+  "name": "ziko-atropos",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development rollup --config rollup.config.js",
@@ -24,6 +29,7 @@
     "rollup": "^4.24.0"
   },
   "dependencies": {
-    "ziko": "^0.0.31"
+    "atropos": "^2.0.2",
+    "ziko": "^0.60.1"
   }
 }

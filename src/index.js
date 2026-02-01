@@ -1,13 +1,36 @@
-import { text } from "ziko";
-const A=1
-const B=2
-const ZikoSomething = {
-    A,
-    B
+import { UIElement, tags } from "ziko/ui";
+import 'atropos/css'
+import __Atropos__ from 'atropos';
+
+
+
+export class UIAtropos extends UIElement{
+    constructor(item){
+        super({ element : 'div'})
+        this.setAttr({class : 'atropos'});
+        this.inner = tags.div({class : 'atropos-inner'}).append(item) 
+        this.append(
+            tags.div({class : 'atropos-scale'}).append(
+                tags.div({class : 'atropos-rotate'}).append(
+                    this.inner
+                )
+            )
+        )
+        this.atropos = __Atropos__({
+            el : this.element,
+            // activeOffset: 40,
+            // shadowScale: 1.05,
+            // onEnter() {
+            //     console.log('Enter');
+            // },
+            // onLeave() {
+            //     console.log('Leave');
+            // },
+            // onRotate(x, y) {
+            //     console.log('Rotate', x, y);
+            // }
+        }) 
+    }
 }
-export default ZikoSomething;
-export{
-    A,
-    B,
-    text
-}
+
+export const Atropos = (item) => new UIAtropos(item)
