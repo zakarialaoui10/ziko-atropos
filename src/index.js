@@ -31,6 +31,23 @@ export class UIAtropos extends UIElement{
             // }
         }) 
     }
+    destroy(){
+        this.atropos.destroy();
+        return this;
+    }
+    onEnter(callback){
+        this.atropos.params.onEnter = callback.bind(this, this);
+        return this;
+    }
+    onLeave(callback){
+        this.atropos.params.onLeave = callback.bind(this, this);
+        return this;
+    }
+    onRotate(callback){
+        this.atropos.params.onRotate = callback;
+        // .onRotate((x, y)=> console.log({x, y}))
+        return this;
+    }
 }
 
 export const Atropos = (item) => new UIAtropos(item)
