@@ -1,13 +1,18 @@
 {
-  "name": "ziko-atropos",
-  "version": "0.2.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@zikojs/atropos",
+  "version": "0.0.0",
+  "description": "Atropos integration for ZikoJS — create touch-friendly 3D parallax effects and interactive elements.",
   "type": "module",
   "exports": {
     ".": {
       "import": "./src/index.js"
+    },
+    "./no-css" : {
+      "import" : "./src/main.js"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,21 +26,22 @@
   },
   "author": "zakaria elalaoui",
   "keywords": [
+    "ziko",
     "zikojs",
-    "zikojs-addons",
     "3d",
-    "gesture"
+    "gesture",
+    "atropos"
   ],
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.0",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "cross-env": "^7.0.3",
-    "rollup": "^4.24.0"
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "cross-env": "^10.1.0",
+    "rollup": "^4.62.4"
   },
   "dependencies": {
     "atropos": "^2.0.2",
-    "ziko": "^0.63.2"
+    "ziko": "^1.8.0"
   }
 }

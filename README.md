@@ -17,8 +17,8 @@ npm i ziko-atropos
 ## Usage
 
 ```js
-import { Atropos } from 'ziko-atropos'
-import { tags } from 'ziko/ui'
+import { Atropos } from '@zikojs/atropos'
+import { tags } from 'ziko/dom'
 
 const a = Atropos(
     tags.div().style({
